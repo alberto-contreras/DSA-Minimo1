@@ -1,4 +1,5 @@
 import org.junit.Before;
+import org.junit.Test;
 
 public class GestorProctosTest {
     GestorProductos gestor ;
@@ -7,21 +8,15 @@ public class GestorProctosTest {
     public void setUp() {
 
         gestor = new GestorProductosImpl();
-        gestor.addProduct("coca-zero", " ", 2.5);
-        gestor.addProduct("choco", "", "1");
-        gestor.addProduct("cafeLlet", "", 1.5);
-        gestor.addProduct("cafeLlet", "", 1.5);
-
-        gestor.addUser("111", "toni");
-
+        ((GestorProductosImpl) gestor).addProducto(1,"CocaCola",2);//porque no me deja directo
         Pedido pedido = new Pedido("111");
-        pedido.addLP(3, "choco");
-        pedido.addLP(1, "coca-zero");
-        pedido.addLP(1, "bocataJamon");
+        pedido.añadirLP(3, "choco");
+        pedido.añadirLP(1, "coca-zero");
+        pedido.añadirLP(1, "bocataJamon");
 
         gestor.anotarPedido(pedido);
     }
-
+    @Test
     public void testEncolarPedido() {
         Pedido pedido = new Pedido("111");
         pedido.addLP(1, "choco");
@@ -35,6 +30,10 @@ public class GestorProctosTest {
         User toni = gestor.getUser("111");
         Assert.assertEquals("cola", 1, toni.getPedidos().size);
 
+
+    }
+    @Test
+    public void servirPedido(){
 
     }
 }

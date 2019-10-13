@@ -12,9 +12,22 @@ public class GestorProductosImpl implements GestorProductos {
         this.productos = new LinkedList<Producto>();
         this.users = new HashMap<String, Usuario>();
     }
+    public void actualizaProducto(String nom, int q){
+        for (int j=0;j<productos.size();j++){
+            Producto prod = productos.get(j);
+            if(nom ==prod.getNombre()){
+                prod.aumentarNumVentas(q);
+            }
+        }
+    }
+    public void addProducto(int id,String nom, int pre){ //Añadimos un producto a nuestra lista
+        productos.add(new Producto(id,nom,pre));
+    }
+    public void adduser(String id,String nombre){
+        users.put(id,new Usuario(id,nombre));
 
-
-    public List<Producto> productosOrdPrecio() {
+    }
+    public List<Producto> productosOrdPrecio(){
         return null;
     }
 
@@ -22,42 +35,15 @@ public class GestorProductosImpl implements GestorProductos {
         pedidos.add(c);
     }
 
-    public void servirPedido() {
+    public void servirPedido() { //Retiramos el pedido de la cola y actualizamos el numero de ventas de los productos
         Pedido pedido1 = pedidos.peek();
-        int auxIdUsuario =pedido1.dimeIdUser(pedido1);
+        String auxIdUsuario =pedido1.dimeIdUser(pedido1);
 
         for (int j=0; j<pedido1.listapedido.size();j++){
-            String producto;
-            pedido1.listapedido
-
+            String producto = pedido1.nombProd(j);
+            int plus = pedido1.cantProd(j);
+            actualizaProducto(producto,plus);
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        Pedido pedido = pedidos.peek();
-
-        for (Pedido.LP lp: pedido.getLPs()) {
-            nomProducte = lp.getProducte();
-            producto = consultarProducto(nomProducte);
-            producto.updateNumVendes(lp.getQuantitat);
-        }
-
-        User user = this.users.get(pedido.getUser());
-        user.addPedido(pedido);
-
 
     }
 

@@ -10,7 +10,11 @@ public class Producto {
         numVentas=0;
 
     }
-    public void aumentarNumVentas(Producto c,int plus){
-        c.numVentas = numVentas + plus;
+    public String  getNombre(){
+        return nombre;
+
+    }
+    public void aumentarNumVentas(int plus){
+        numVentas = numVentas + plus;
     }
 }
