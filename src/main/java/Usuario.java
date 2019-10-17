@@ -11,4 +11,15 @@ public class Usuario {
         this.misPedidos = new LinkedList<Pedido>();
 
     }
+    public String getIdusario (){
+        return iduser;
+    }
+    public String devuelvePedido1(){//devuelve el primer pedido
+        Pedido aux = misPedidos.get(0);
+        return aux.dimeIdUserv2();
+    }
+    public void addPedidoalHistorial(Pedido c){
+        misPedidos.add(c);
+    }
+
 }

@@ -26,7 +26,7 @@ public class Pedido {
         this.listapedido = new LinkedList<LP>();
     }
 
-    public List<LP>getLPs() {
+    public List<LP> getLPs() {
         return this.listapedido;
     }
 
@@ -38,6 +38,7 @@ public class Pedido {
     public String dimeIdUser(Pedido h){//Nos devuelve el id del usuario del pedido que le pasamos por parametro
         return h.idUser;
     }
+    public String dimeIdUserv2(){ return this.idUser;}
 
     public int cantProd(int i){ // Nos devuelve la cantidad del producto en la posición i
         LP aux = listapedido.get(i);
