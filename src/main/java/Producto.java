@@ -15,5 +15,10 @@ public class Producto {
     public void aumentarNumVentas(int plus){
         numVentas = numVentas + plus;
     }
+    public int getNumVentas(){return numVentas;}
+    public int compareTo (Producto f){
+        return (this.numVentas - f.numVentas);
+
+    }
 
 }

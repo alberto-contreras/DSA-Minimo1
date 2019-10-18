@@ -2,21 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9919d8c-2cac-499d-a0b5-1c4fe2d4a1c4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minimo1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Minimo1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GestorProductos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GestorProductos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GestorProductosImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GestorProductosImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pedido.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Producto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Usuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/GestorProctosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GestorProctosTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GestorProductos.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GestorProductos.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/GestorProductosImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GestorProductosImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Pedido.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pedido.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Producto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Producto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Usuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/GestorProctosTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/GestorProctosTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +47,46 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.GestorProctosTest">
+    <configuration name="GestorProctosTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Minimo1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GestorProctosTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GestorProctosTest.encolarPedido" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Minimo1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GestorProctosTest" />
+      <option name="METHOD_NAME" value="encolarPedido" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GestorProctosTest.listapedidoPorUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Minimo1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GestorProctosTest" />
+      <option name="METHOD_NAME" value="listapedidoPorUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GestorProctosTest.servirPedido" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Minimo1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GestorProctosTest" />
+      <option name="METHOD_NAME" value="servirPedido" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GestorProctosTest.testEncolarPedido" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Minimo1" />
       <option name="PACKAGE_NAME" value="" />
@@ -67,6 +99,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GestorProctosTest" />
+        <item itemvalue="JUnit.GestorProctosTest.listapedidoPorUser" />
+        <item itemvalue="JUnit.GestorProctosTest.servirPedido" />
+        <item itemvalue="JUnit.GestorProctosTest.encolarPedido" />
         <item itemvalue="JUnit.GestorProctosTest.testEncolarPedido" />
       </list>
     </recent_temporary>

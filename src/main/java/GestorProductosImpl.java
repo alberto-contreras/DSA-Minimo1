@@ -1,7 +1,5 @@
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
+import java.lang.Comparable;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
@@ -28,7 +26,8 @@ public class GestorProductosImpl implements GestorProductos {
         productos.add(new Producto(id,nom,pre));
     }
     public void addUser(Usuario c){
-        users.put(c.getIdusario(),c);
+        users.put(c.getIdusuario(),c);
+        log.info("Num users in the hashmap:"+ users.size());
     }
     public List<Producto> productosOrdPrecio(){
         return null;
@@ -42,7 +41,6 @@ public class GestorProductosImpl implements GestorProductos {
         Pedido pedido1 = pedidos.peek();
         log.info(" PEDIDO del user "+pedido1.dimeIdUserv2());
         String auxIdUsuario =pedido1.dimeIdUser(pedido1);
-        log.info(" Num ventas antes de añadir");
         for (int j=0; j<pedido1.listapedido.size();j++){
             String producto = pedido1.nombProd(j);
             int plus = pedido1.cantProd(j);
@@ -52,7 +50,10 @@ public class GestorProductosImpl implements GestorProductos {
         a.addPedidoalHistorial(pedido1);
     }
     public List<Pedido> pedidoPorUser(String iduser) {
-        return null;
+        Usuario b = users.get(iduser);
+        log.info("DATA"+b.miHistorial());
+        return b.miHistorial();
+
     }
 
     public List<Producto> productosOrdVentas() {

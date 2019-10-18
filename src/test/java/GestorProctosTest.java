@@ -13,10 +13,13 @@ public class GestorProctosTest {
 
         gestor = new GestorProductosImpl();
         gestor.addProducto("1","CocaCola-Zero",2);//porque no me deja directo
-        Pedido pedido = new Pedido("111");
-        pedido.añadirLP(3, "choco");
-        pedido.añadirLP(1, "coca-zero");
-        pedido.añadirLP(1, "bocataJamon");
+        Pedido pedido1 = new Pedido("111");
+        pedido1.añadirLP(3, "baguette");
+        pedido1.añadirLP(1, "croissant");
+        pedido1.añadirLP(1, "bravas");
+        Usuario toni = new Usuario("222","toni");
+        gestor.anotarPedido(pedido1);
+        gestor.addUser(toni);
 
 
     }
@@ -42,11 +45,28 @@ public class GestorProctosTest {
         pedido.añadirLP(1, "bocataJamon");
         gestor.anotarPedido(pedido); // añadir pedido
         Usuario alberto = new Usuario("111","Alberto");
-        Assert.assertEquals("Añadir correctamente usuario","111", alberto.getIdusario());
+        Assert.assertEquals("Añadir correctamente usuario","111", alberto.getIdusuario());
         gestor.addUser(alberto);
         Assert.assertEquals("Añadir correctamente producto en el pedido","coca-zero",pedido.nombProd(1) );
         gestor.servirPedido();//servimos pedido
-        Assert.assertEquals("Añadir correctamente producto en el pedido","111",alberto.devuelvePedido1());
+        Assert.assertEquals("Añadir correctamente producto en el pedido","111",alberto.devuelvePedido1().toString());
+
+    }
+    @Test
+    public void listapedidoPorUser(){
+        gestor.addProducto("1","CocaCola",2);
+        Pedido pedido = new Pedido("111");
+        pedido.añadirLP(3, "choco");
+        pedido.añadirLP(1, "coca-zero");
+        pedido.añadirLP(1, "bocataJamon");
+        gestor.anotarPedido(pedido); // añadir pedido
+        Usuario alberto = new Usuario("111","Alberto");
+        Assert.assertEquals("Añadir correctamente usuario","111", alberto.getIdusuario());
+        gestor.addUser(alberto);
+        Assert.assertEquals("Añadir correctamente producto en el pedido","coca-zero",pedido.nombProd(1) );
+        gestor.servirPedido();//servimos pedido
+        gestor.servirPedido();
+        gestor.pedidoPorUser(alberto.getIdusuario());
 
     }
 }
