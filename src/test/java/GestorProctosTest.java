@@ -12,14 +12,17 @@ public class GestorProctosTest {
     public void setUp() {
 
         gestor = new GestorProductosImpl();
-        gestor.addProducto("1","CocaCola-Zero",2);//porque no me deja directo
-        Pedido pedido1 = new Pedido("111");
+        gestor.addProducto("1","CocaCola-Zero",2);
+        gestor.addProducto("2","baguette",1);
+        gestor.addProducto("3","bravas",3);
+        Pedido pedido1 = new Pedido("222");
         pedido1.añadirLP(3, "baguette");
         pedido1.añadirLP(1, "croissant");
         pedido1.añadirLP(1, "bravas");
         Usuario toni = new Usuario("222","toni");
         gestor.anotarPedido(pedido1);
         gestor.addUser(toni);
+        gestor.servirPedido();
 
 
     }
@@ -38,18 +41,17 @@ public class GestorProctosTest {
     }
     @Test
     public void servirPedido(){
+        Usuario alberto = new Usuario("111","Alberto");
+        gestor.addUser(alberto);
         gestor.addProducto("1","CocaCola",2);
         Pedido pedido = new Pedido("111");
-        pedido.añadirLP(3, "choco");
-        pedido.añadirLP(1, "coca-zero");
+        pedido.añadirLP(3, "bravas");
+        pedido.añadirLP(1, "CocaCola-Zero");
         pedido.añadirLP(1, "bocataJamon");
         gestor.anotarPedido(pedido); // añadir pedido
-        Usuario alberto = new Usuario("111","Alberto");
         Assert.assertEquals("Añadir correctamente usuario","111", alberto.getIdusuario());
-        gestor.addUser(alberto);
-        Assert.assertEquals("Añadir correctamente producto en el pedido","coca-zero",pedido.nombProd(1) );
         gestor.servirPedido();//servimos pedido
-        Assert.assertEquals("Añadir correctamente producto en el pedido","111",alberto.devuelvePedido1().toString());
+        Assert.assertEquals("Añadir correctamente producto en el pedido","111",alberto.devuelvePedido1());
 
     }
     @Test
@@ -65,8 +67,13 @@ public class GestorProctosTest {
         gestor.addUser(alberto);
         Assert.assertEquals("Añadir correctamente producto en el pedido","coca-zero",pedido.nombProd(1) );
         gestor.servirPedido();//servimos pedido
-        gestor.servirPedido();
         gestor.pedidoPorUser(alberto.getIdusuario());
 
+    }
+    @Test
+    public void listaproductosVentas() {
+    }
+    @Test
+    public void listaproductosPrecio() {
     }
 }

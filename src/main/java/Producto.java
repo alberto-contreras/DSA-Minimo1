@@ -16,9 +16,6 @@ public class Producto {
         numVentas = numVentas + plus;
     }
     public int getNumVentas(){return numVentas;}
-    public int compareTo (Producto f){
-        return (this.numVentas - f.numVentas);
-
-    }
+    public int getPrecio(){return precio;}
 
 }

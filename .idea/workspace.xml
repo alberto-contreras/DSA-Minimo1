@@ -4,11 +4,9 @@
     <list default="true" id="e9919d8c-2cac-499d-a0b5-1c4fe2d4a1c4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GestorProductosImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GestorProductosImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pedido.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Producto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Usuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/GestorProctosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GestorProctosTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GestorProductosImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GestorProductosImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Usuario.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/GestorProctosTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/GestorProctosTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,7 +45,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.GestorProctosTest">
+  <component name="RunManager" selected="JUnit.GestorProctosTest.listapedidoPorUser">
     <configuration name="GestorProctosTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Minimo1" />
       <option name="PACKAGE_NAME" value="" />
@@ -77,6 +75,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GestorProctosTest.listaproductosVentas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Minimo1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GestorProctosTest" />
+      <option name="METHOD_NAME" value="listaproductosVentas" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GestorProctosTest.servirPedido" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Minimo1" />
       <option name="PACKAGE_NAME" value="" />
@@ -87,23 +95,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GestorProctosTest.testEncolarPedido" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Minimo1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GestorProctosTest" />
-      <option name="METHOD_NAME" value="testEncolarPedido" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GestorProctosTest" />
         <item itemvalue="JUnit.GestorProctosTest.listapedidoPorUser" />
+        <item itemvalue="JUnit.GestorProctosTest" />
         <item itemvalue="JUnit.GestorProctosTest.servirPedido" />
+        <item itemvalue="JUnit.GestorProctosTest.listaproductosVentas" />
         <item itemvalue="JUnit.GestorProctosTest.encolarPedido" />
-        <item itemvalue="JUnit.GestorProctosTest.testEncolarPedido" />
       </list>
     </recent_temporary>
   </component>

@@ -29,17 +29,15 @@ public class GestorProductosImpl implements GestorProductos {
         users.put(c.getIdusuario(),c);
         log.info("Num users in the hashmap:"+ users.size());
     }
-    public List<Producto> productosOrdPrecio(){
-        return null;
-    }
 
     public void anotarPedido(Pedido c) { //El pedido se añade a la cola
+        log.info("Anotando pedido del user: "+c.dimeIdUserv2());
         pedidos.add(c);
     }
 
     public void servirPedido() { //Retiramos el pedido de la cola y actualizamos el numero de ventas de los productos
-        Pedido pedido1 = pedidos.peek();
-        log.info(" PEDIDO del user "+pedido1.dimeIdUserv2());
+        Pedido pedido1 = pedidos.poll();
+        log.info(" Sirviendo PEDIDO del user: "+pedido1.dimeIdUser(pedido1));
         String auxIdUsuario =pedido1.dimeIdUser(pedido1);
         for (int j=0; j<pedido1.listapedido.size();j++){
             String producto = pedido1.nombProd(j);
@@ -56,7 +54,27 @@ public class GestorProductosImpl implements GestorProductos {
 
     }
 
-    public List<Producto> productosOrdVentas() {
-        return null;
+    public List<Producto> productosOrdVentas() { //Creamos una copia de la lista y definimos el metodo comparar en este caso
+        List<Producto> clon = new LinkedList<Producto>();// como nos interese
+        clon.addAll(this.productos);
+        Collections.sort(clon, new Comparator<Producto>() {
+            public int compare(Producto o1, Producto o2) {
+                return (o1.getNumVentas() - o2.getNumVentas());
+            }
+        });
+        return clon;
+    }
+    public List<Producto> productosOrdPrecio(){//Creamos una copia de la lista y definimos el metodo comparar en este caso
+        List<Producto> clon = new LinkedList<Producto>();// como nos interese
+        clon.addAll(this.productos);
+        Collections.sort(clon, new Comparator<Producto>() {
+            public int compare(Producto o1, Producto o2) {
+                return (o1.getPrecio() - o2.getPrecio());
+            }
+        });
+        return clon;
+
+
+
     }
 }
