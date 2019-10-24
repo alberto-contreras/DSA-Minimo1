@@ -56,7 +56,8 @@ public class GestorProctosTest {
     }
     @Test
     public void listapedidoPorUser(){
-        gestor.addProducto("1","CocaCola",2);
+        gestor.addProducto("4","CocaCola",2);
+        gestor.addProducto("5","choco",2);
         Pedido pedido = new Pedido("111");
         pedido.añadirLP(3, "choco");
         pedido.añadirLP(1, "coca-zero");
@@ -65,15 +66,43 @@ public class GestorProctosTest {
         Usuario alberto = new Usuario("111","Alberto");
         Assert.assertEquals("Añadir correctamente usuario","111", alberto.getIdusuario());
         gestor.addUser(alberto);
-        Assert.assertEquals("Añadir correctamente producto en el pedido","coca-zero",pedido.nombProd(1) );
+        Assert.assertEquals("Añadir correctamente producto en el pedido","bocataJamon",pedido.nombProd(2) );
         gestor.servirPedido();//servimos pedido
         gestor.pedidoPorUser(alberto.getIdusuario());
 
     }
     @Test
     public void listaproductosVentas() {
+        gestor.addProducto("4","CocaCola",2);
+        gestor.addProducto("5","choco",2);
+        Pedido pedido = new Pedido("111");
+        pedido.añadirLP(3, "choco");
+        pedido.añadirLP(1, "coca-zero");
+        pedido.añadirLP(1, "bocataJamon");
+        gestor.anotarPedido(pedido); // añadir pedido
+        Usuario alberto = new Usuario("111","Alberto");
+        Assert.assertEquals("Añadir correctamente usuario","111", alberto.getIdusuario());
+        gestor.addUser(alberto);
+        Assert.assertEquals("Añadir correctamente producto en el pedido","bocataJamon",pedido.nombProd(2) );
+        gestor.servirPedido();//servimos pedido
+        gestor.productosOrdVentas();
+
     }
     @Test
     public void listaproductosPrecio() {
+        gestor.addProducto("4","CocaCola",2);
+        gestor.addProducto("5","choco",2);
+        Pedido pedido = new Pedido("111");
+        pedido.añadirLP(3, "choco");
+        pedido.añadirLP(1, "coca-zero");
+        pedido.añadirLP(1, "bocataJamon");
+        gestor.anotarPedido(pedido); // añadir pedido
+        Usuario alberto = new Usuario("111","Alberto");
+        Assert.assertEquals("Añadir correctamente usuario","111", alberto.getIdusuario());
+        gestor.addUser(alberto);
+        Assert.assertEquals("Añadir correctamente producto en el pedido","bocataJamon",pedido.nombProd(2) );
+        gestor.servirPedido();//servimos pedido
+        gestor.productosOrdPrecio();
+
     }
 }

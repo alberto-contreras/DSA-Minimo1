@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -19,6 +20,9 @@ public class Pedido {
          }
          public int getLPq() {
              return q;
+        }
+         public String toString(){
+             return this.q+"-"+this.producto;
         }
      }
     public Pedido(String id) {//Constructor
@@ -49,6 +53,10 @@ public class Pedido {
         LP aux = listapedido.get(i);
         return aux.getLPproducto();
 
+    }
+
+    public String toString(){ //Solo hace falta implementarlo para verlo en el logger
+        return this.idUser+ ""+Arrays.asList(this.listapedido);
     }
 
 }

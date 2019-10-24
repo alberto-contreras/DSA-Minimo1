@@ -49,7 +49,7 @@ public class GestorProductosImpl implements GestorProductos {
     }
     public List<Pedido> pedidoPorUser(String iduser) {
         Usuario b = users.get(iduser);
-        log.info("DATA"+b.miHistorial());
+        log.info("DATA lista pedidos user"+b.miHistorial());
         return b.miHistorial();
 
     }
@@ -62,6 +62,7 @@ public class GestorProductosImpl implements GestorProductos {
                 return (o1.getNumVentas() - o2.getNumVentas());
             }
         });
+        //log.info("DATA lista pedidos por ventas"+clon);
         return clon;
     }
     public List<Producto> productosOrdPrecio(){//Creamos una copia de la lista y definimos el metodo comparar en este caso
@@ -72,6 +73,7 @@ public class GestorProductosImpl implements GestorProductos {
                 return (o1.getPrecio() - o2.getPrecio());
             }
         });
+        //log.info("DATA lista productos por precio"+clon);
         return clon;
 
 
